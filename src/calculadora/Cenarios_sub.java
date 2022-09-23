@@ -1,34 +1,51 @@
 package calculadora;
+import junit.framework.Assert;
+import org.junit.jupiter.api.Test;
+@SuppressWarnings("deprecation")
 
 public class Cenarios_sub {
-	public void subtracao() {
-		CalculadoraSubtrair sub = new CalculadoraSubtrair();// Inicializando CalculadoraSubtrair para poder usar sua função adicionado valores como parâmetros.
-		int subt=0;
-	
-		// Cenário 01, para testar dois numeros, sendo os dois valores positivos
-		subt = sub.subtrair(21, 7);     
-		System.out.println(subt);
-		
-		// Cenário 02, para testar dois numeros, sendo os dois valores negativos
-		subt = sub.subtrair(-17, -7);   
-		System.out.println(subt);
-		
-		 // Cenário 03, para testar dois numeros, um deles sendo positivo e outro negativo
-		subt = sub.subtrair(3, -7);    
-		System.out.println(subt);
-		
-		 // Cenário 04, para testar dois numeros, sendo os dois valores 0.
-		subt = sub.subtrair(0, 0);    
-		System.out.println(subt);
-		
-		// Cenário 05, para testar dois numeros, um deles sendo zero e outro negativo
-		subt = sub.subtrair(0, -5);    
-		System.out.println(subt);
-		
-		// Cenário 06, para testar dois numeros, um deles sendo zero e outro positivo
-		subt = sub.subtrair(0, 5);     
-		System.out.println(subt);
-		
+	int sub1 =0;
+ 
+	@Test
+	public void SubtrirDoisNumerosPositivos() {					
+		CalculadoraSubtrair sub = new CalculadoraSubtrair();
+		sub1 = sub.subtrair(21, 7);		//Cenário que vai testar dois valores positivos 
+		Assert.assertEquals(14, sub1);  //Nessa linha  ira verificar o resultado e a variável.
 	}
-	
+
+	@Test
+	public void SubtrirDoisNumerosNegativos() {
+		CalculadoraSubtrair sub = new CalculadoraSubtrair();
+		sub1 = sub.subtrair(-28, -7);	//Cenário que vai testar dois valores negativos 
+		Assert.assertEquals(-21, sub1); //Nessa linha  ira verificar o resultado e a variável.
+	}
+
+	@Test
+	public void SubtrirDoisNumerosPositivoNegativos() {
+		CalculadoraSubtrair sub = new CalculadoraSubtrair();
+		sub1 = sub.subtrair(28, -7);    //Cenário que vai testar dois valores, positivo e negativo 
+		Assert.assertEquals(35, sub1); //Nessa linha  ira verificar o resultado e a variável.
+	}
+
+	@Test
+	public void SubtrirDoisNumerosNegativoPositivo() {
+		CalculadoraSubtrair sub = new CalculadoraSubtrair();
+		sub1 = sub.subtrair(-28, 7);	//Cenário que vai testar dois valores negativo e positivo  
+		Assert.assertEquals(-35, sub1); //Nessa linha ira verificar o resultado e a variável.
+	}
+
+	@Test
+	public void SubtrirDoisNumerosZeros() {
+		CalculadoraSubtrair sub = new CalculadoraSubtrair();
+		sub1 = sub.subtrair(0, 0);		//Cenário que vai testar dois valores zeros 
+		Assert.assertEquals(0, sub1); //Nessa linha ira verificar o resultado e a variável.
+	}
+
+	@Test
+	public void SubtrirDoisNumerosZeroPositivo() {
+		CalculadoraSubtrair sub = new CalculadoraSubtrair();
+		sub1 = sub.subtrair(0, 7);     //Cenário que vai testar dois valores zero e positivo  
+		Assert.assertEquals(-7, sub1); //Nessa linha ira verificar o resultado e a variável.
+	}
+
 }

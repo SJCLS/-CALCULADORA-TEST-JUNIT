@@ -1,34 +1,46 @@
 package calculadora;
+import junit.framework.Assert;
+import org.junit.jupiter.api.Test;
+@SuppressWarnings("deprecation")
 
 public class Cenarios_div {
-	public void divisao() {
-		CalculadoraDivisao div = new CalculadoraDivisao(); // Inicializando CalculadoraDivisão para poder usar sua função adicionado valores como parâmetros.
-		float divi = 0;
-
-		// Cenário 01, para testar dois numeros, sendo os dois valores positivos
-		divi = div.dividir(21, 7);
-		System.out.println(divi);
-
-		// Cenário 02, para testar dois numeros, sendo os dois valores negativos
-		divi = div.dividir(-28, -7);
-		System.out.println(divi);
-
-		// Cenário 03, para testar dois numeros, um deles sendo positivo e outro
-		// negativo
-		divi = div.dividir(14, -7);
-		System.out.println(divi);
-
-		// Cenário 04, para testar dois numeros, sendo os dois valores 0.
-		divi = div.dividir(0, 0);
-		System.out.println(divi);
-
-		// Cenário 05, para testar dois numeros, um deles sendo zero e outro negativo
-		divi = div.dividir(-5, 0);
-		System.out.println(divi);
-
-		// Cenário 06, para testar dois numeros, um deles sendo zero e outro positivo
-		divi = div.dividir(0, 5);
-		System.out.println(divi);
+	double divi1 =0;
+	@Test
+	public void DividirDoisNumerosPositivos() {
+		CalculadoraDivisao div = new CalculadoraDivisao(); 
+		divi1 = div.dividir(21, 7);//Cenário que vai testar dois valores positivos 
+		Assert.assertEquals(3.0 , divi1);//Nessa linha  ira verificar o resultado e a variável.
 	}
+	@Test
+	public void DividirDoisNumerosNegativos() {
+		CalculadoraDivisao div = new CalculadoraDivisao(); 
+		divi1 = div.dividir(-28, -7);//Cenário que vai testar dois valores negativos 
+		Assert.assertEquals(4.0 , divi1);//Nessa linha  ira verificar o resultado e a variável.
+	}
+	@Test
+	public void DividirDoisNumerosPositivoNegativos() {
+		CalculadoraDivisao div = new CalculadoraDivisao(); 
+		divi1 = div.dividir(28, -7);//Cenário que vai testar dois valores positivos e negativo
+		Assert.assertEquals(-4.0 , divi1);//Nessa linha  ira verificar o resultado e a variável.
+	}
+	@Test
+	public void DividirDoisNumerosNegativoPositivo() {
+		CalculadoraDivisao div = new CalculadoraDivisao(); 
+		divi1 = div.dividir(-28, 7);//Cenário que vai testar dois valores zeros e negativo e positivo
+		Assert.assertEquals(-4.0 , divi1);//Nessa linha  ira verificar o resultado e a variável.
+	}
+	@Test
+	public void DividirDoisNumerosZeros() {
+		CalculadoraDivisao div = new CalculadoraDivisao(); 
+		divi1 = div.dividir(0, 0);//Cenário que vai testar dois valores zeros
+		Assert.assertEquals(0.0 , divi1);//Nessa linha  ira verificar o resultado e a variável.
+	}
+	@Test
+	public void DividirDoisNumerosZeroPositivo() {
+		CalculadoraDivisao div = new CalculadoraDivisao(); 
+		divi1 = div.dividir(0, 7);//Cenário que vai testar dois valores zeros e positivo
+		Assert.assertEquals(0.0 , divi1);//Nessa linha  ira verificar o resultado e a variável.
+	}
+
 
 }
