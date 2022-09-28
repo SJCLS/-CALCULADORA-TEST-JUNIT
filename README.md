@@ -8,6 +8,12 @@
   <h3> Objetivo </h3>
    Realizamos testes para o maior cobertura de qualidade da aplicação, encontrados bugs e feito tratamento em cada um deles, todo o codigo está comentado para maior entendimento do código.
    
+   
+
+https://user-images.githubusercontent.com/100521198/192887190-8c14122e-f262-477f-b534-6c75c53b1db9.mp4
+
+
+   
   
   
   
