@@ -1,8 +1,14 @@
-<h1 >Testes unitários em uma Calculadora </h1>
+<h1 >Testes unitários em Calculadora </h1>
 
 <h2> Descrição</h2>
-  Esse projeto tem como objeto criar cenários unitarios para testar funcionalidades da calculadora
- <br>Tendo suas funcionalidades operações de somar, subtrair, multiplicar e dividir.
- <br>Para cada operação matemática foram desenvolvidos 6 cenários e tratamento em suas classes.
- <br>O código está divido 9 classes sendo elas 4 clases para realizar as operações, 4 para cenários de cada operação e 1 classe Teste 
+  Esse projeto este foi desenvolvido em duas versões:<br><br>
+     A primeira Versão para aprendizado da utilização de testes unitários em determinadas classes de operações matemáticas, sem a utilizaçãoa de nenhuma biblioteca de testes.<br><br>
+     A segunda Versão para aprimoramento de utilização de testes utilizando a biblioteca especifica de testes Junit5, atribuindo cenários dentro de cada classe e chamandoas funçoes na main.
+  
+  <h3> Objetivo </h3>
+   Realizamos testes para o maior cobertura de qualidade da aplicação, encontrados bugs e feito tratamento em cada um deles, todo o codigo está comentado para maior entendimento do código.
+   
+  
+  
+  
  
